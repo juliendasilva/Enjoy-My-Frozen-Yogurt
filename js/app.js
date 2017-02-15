@@ -1,3 +1,3 @@
 "use strict";
 
-var lol = "lol";
+var lol = "ok";

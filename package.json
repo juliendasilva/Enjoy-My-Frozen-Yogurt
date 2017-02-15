@@ -1,0 +1,20 @@
+{
+  "name": "w2-p2018-12",
+  "version": "1.0.0",
+  "description": "Mobile first Hetic project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliendasilva/w2-p2018-12.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliendasilva/w2-p2018-12/issues"
+  },
+  "homepage": "https://github.com/juliendasilva/w2-p2018-12#readme"
+}

@@ -1,5 +1,9 @@
-$bg: red;
+$bg: blue;
 
-body{
-	color: $bg;
+body {
+  color: $bg;
+}
+
+#header{
+  position: relative;
 }

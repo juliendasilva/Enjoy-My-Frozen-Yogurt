@@ -1,5 +1,2 @@
-$bg: red;
-
-body{
-	color: $bg;
-}
+@import 'vendors/reset';
+@import 'logo/logo.scss';

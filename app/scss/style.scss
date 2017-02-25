@@ -1,9 +1,3 @@
-$bg: blue;
-
-body {
-  color: $bg;
-}
-
-#header{
-  position: relative;
-}
+@import 'vendors/reset';
+/*@include font-face(gunny_written, ../fonts/gunny_written);*/
+@import 'header/header.scss';

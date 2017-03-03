@@ -1,3 +1,13 @@
+// Some global variables.
+$red : #CC2355;
+$debugBorder: 1px solid black;
+
+
 @import 'vendors/reset';
-/*@include font-face(gunny_written, ../fonts/gunny_written);*/
-@import 'header/header.scss';
+@import 'vendors/fontface';
+/* Include some font-faces */
+@include fontFace('gunny_written','../fonts/gunny_written/gunny_written');
+@include fontFace('OpenSans-Regular', '../fonts/Open_Sans/OpenSans-Regular');
+@import 'vendors/global';
+@import 'header/header';
+@import 'blocs/global-blocs';

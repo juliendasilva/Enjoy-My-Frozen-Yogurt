@@ -54,6 +54,11 @@ gulp.task('img', () => {
     .pipe(gulp.dest(path.join(__dirname, 'dist/images')))
 });
 
+/* ------ Tranfert fonts folder ----- */
+gulp.task('fonts', () => {
+    return gulp.src(path.join(__dirname, "app/fonts/**/*"))
+        .pipe(gulp.dest(path.join(__dirname, 'dist/fonts')))
+});
 /* ------ Watch news in html, scss, js files. ----- */
 gulp.task('watch', () => {
   gulp.watch(['./app/index.html'], ['html']);
@@ -63,13 +68,13 @@ gulp.task('watch', () => {
 });
 
 /* ------ Build application. ----- */
-gulp.task('build:dev', ['html', 'es6:dev', 'scss:dev', 'img'], () => {
+gulp.task('build:dev', ['html', 'es6:dev', 'scss:dev', 'img', 'fonts'], () => {
   // Make a build
   // Transpilation es6 to es5
   // Then ... adding some minification.
 });
 
-gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img'], () => {
+gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img', 'fonts'], () => {
   // Make a build
   // Transpilation es6 to es5
   // Then ... adding some minification.

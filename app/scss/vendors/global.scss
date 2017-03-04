@@ -13,7 +13,22 @@
   transform: translate(-50%,-100%);
 }
 
+#target-block-2 {
+  margin-top:67px;
+}
+
 .big-title {
-  font-family: gunny_written;
+  font-family: $title-font;
   font-size: 33px;
+}
+.small-title {
+  font-family: $title-font;
+  font-size: 22px;
+}
+
+.global-text {
+  font-family: $default-font;
+  margin-top: 7px;
+  font-size:15px;
+  line-height: 22px;
 }

@@ -1,0 +1,117 @@
+.blocks-wrapper {
+  /*position:relative;*/
+  height:auto;
+  /*border:1px solid red;*/
+}
+
+.wrapper-block-1 {
+  /*border: $debugBorder;*/
+  width: 88%;
+  margin: -83px auto 30px;
+  text-align: center;
+  & .big-title {
+    color: #CC2355;
+    width: 80%;
+    margin: 0 auto 10px auto;
+  }
+}
+
+.wrapper-block-2 {
+  margin-top:220px;
+  width: 100%;
+  height:90vh;
+  /*border: $debugBorder;*/
+  background:url('../images/bg-content-2.svg');
+  background-size: cover;
+  & .container-glace-img {
+    width:335px;
+    height:250px;
+    background:url('../images/glace2.png');
+    background-size: cover;
+    margin: -70px auto 20px auto;
+  }
+  & .big-title {
+    color:white;
+  }
+  & .container-text {
+    width:88%;
+    margin: auto;
+    color: #ffffff;
+  }
+  & .discover-button {
+    font-family: $default-font;
+    font-size: 14px;
+    color:white;
+    height: 44px;
+    width: 82%;
+    background-color: #CC2355;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+
+  }
+}
+
+.wrapper-block-3 {
+  width:100%;
+  height: 220px;
+  background-color: $red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  & .singleBlock {
+    top:50%;
+    width:100%;
+    text-align: center;
+    height:75%;
+    /*border:1px solid ;*/
+  }
+  & .block-left img {
+    height:100%;
+  }
+  & .block-right {
+    display: flex;
+    align-items: center;
+    color:#ffffff;
+    text-align: left;
+    & .block-3-title {
+      /* If we need to add some style to this title later */
+    }
+    & .block-3-text {
+      font-family: $default-font;
+      line-height:19px;
+    }
+  }
+}
+
+.wrapper-block-4 {
+  background-color: $red;
+  margin-top:180px;
+  width:100%;
+  height:431px;
+  & .block-4-img {
+    position: relative;
+    /*border:1px solid;*/
+    height:130px;
+    & img {
+      position: absolute;
+      top:-129px;
+      width:100%;
+      height:auto;
+    }
+  }
+  & .container-text {
+    margin:0 auto;
+    border:1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
+    color: #ffffff;
+  }
+  & .block-4-title {
+
+  }
+}

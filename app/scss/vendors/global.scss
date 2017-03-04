@@ -1,0 +1,19 @@
+.start-scroll-btn {
+  height: 44px;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  background-color: #CC2355;
+  border: none;
+  border-radius: 25px;
+  background-image: url(../images/arrow_bottom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 50%;
+  transform: translate(-50%,-100%);
+}
+
+.big-title {
+  font-family: gunny_written;
+  font-size: 33px;
+}

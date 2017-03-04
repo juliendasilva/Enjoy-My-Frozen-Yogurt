@@ -83,6 +83,6 @@ gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img', 'fonts'], () =>
 });
 
 gulp.task('deploy', ['build:prod'], () => {
-  gulp.src(path.join(__dirname, "/dist/**/*"))
+  return gulp.src(path.join(__dirname, "/dist/**/*"))
     .pipe(deploy())
 });

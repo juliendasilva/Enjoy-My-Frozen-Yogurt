@@ -63,3 +63,23 @@
 
   }
 }
+
+.wrapper-bloc-3 {
+  width:100%;
+  height: 220px;
+  background-color: $red;
+  display: flex;
+  & .singleBlock-3 {
+    width:100%;
+    text-align: center;
+  }
+  & .block-left {
+    border:1px solid blue;
+    height:100%;
+    width:100%;
+    background-image: url('../images/annanas.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}

@@ -1,5 +1,5 @@
 (function() {
-  const durationByDefault = 250;
+  const durationByDefault = 450;
 
   function scrollTo(element, to, duration) {
     if (duration <= 0) return;

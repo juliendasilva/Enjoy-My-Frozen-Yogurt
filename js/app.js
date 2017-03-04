@@ -1,1 +1,1 @@
-"use strict";var lol="ok";
+"use strict";$("a").click(function(){return $("html, body").animate({scrollTop:$($(this).attr("href")).offset().top},2e3),!1});

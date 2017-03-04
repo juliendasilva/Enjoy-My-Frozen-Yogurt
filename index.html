@@ -4,6 +4,7 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script async src="./js/app.js"></script>
 </head>
 <body>
@@ -11,13 +12,72 @@
 		<h1>
 			<img class="logo" src="images/logo.png" alt="Enjoy">	
 		</h1>
-		
+		<img class="main-image" src="images/glace1.png" alt="glace_miam" draggable="false">
 	</header>
-	<div class="wrapper-bloc-1">
-			<h2 class="titre">Une bonne dose de plaisir gourmand</h2>
-			<p>Le frozen yogurt enJöy, c'est une glace au yaourt onctueuse, agrémentée de fruits frais de saison, de coulis, de biscuits croquants ou de bonbons, selon vos envies.</p>
-			<!--<img src="images/bg-header.svg" alt="">-->
-	</div>
+
+	<div class="blocks-wrapper">
+		<!--Block 1 -->
+		<div class="wrapper-block-1">
+			<h2 class="big-title">Une bonne dose de plaisir gourmand</h2>
+			<p class="global-text">Le frozen yogurt enJöy, c'est une glace au yaourt onctueuse, agrémentée de fruits frais de saison, de coulis, de biscuits croquants ou de bonbons, selon vos envies.</p>
+		</div>
+		<!-- Button Call To Action -->
+		<a href="#target-block-2" class="start-scroll-btn"></a>
+		<!--Block 2 -->
+		<div id="target-block-2"></div>
+		<div class="wrapper-block-2">
+			<div class="container-glace-img"></div>
+			<div class="container-text">
+				<h2 class="big-title">Des ingrédients sains et naturels</h2>
+				<p class="global-text block-2-text" >Nos frozen yogurt sont élaborés à partir d'ingrédients naturels et de qualité : du lait demi-écrémé, du yaourt nature et un peu de sucre. Le yaourt glacé est brassé dans une machine spécifique afin de lui apporter la texture légère et onctueuse.</p>
+				<button class="discover-button">Découvrez tous nos toppings</button>
+			</div>
+		</div>
+		<!--Block 3 -->
+		<div class="wrapper-block-3">
+			<div class="singleBlock block-left">
+				<img src="./images/annanas.png" alt="">
+			</div>
+			<div class="singleBlock block-right">
+				<div class="container-text">
+					<h2 class="big-title block-3-title">
+						Des fruits frais de saison
+					</h2>
+					<p class="block-3-text global-text">
+						Chez enJöy, nous attachons une grande importance à ne proposer que des fruits frais de saison.
+					</p>
+				</div>
+
+			</div>
+		</div>
+		<!--Block 4 -->
+		<div class="wrapper-block-4">
+			<div class="block-4-img">
+				<img src="./images/gauffre.png" alt="">
+			</div>
+			<div class="container-text">
+				<h2 class="big-title block-4-title">Des ingrédients sains et naturels</h2>
+				<p class="global-text">Nos frozen yogurt sont élaborés à partir d'ingrédients naturels et de qualité : du lait demi-écrémé, du yaourt nature et un peu de sucre.</p>
+			</div>
+			<button class="discover-toppings-button"> Découvrez tous nos toppings </button>
+		</div>
+		<!--Block 5-->
+		<div class="wrapper-block-5">
+			<div class="block-5-container">
+				<div class="block-5-img">
+					<img src="./images/milk.png" alt="">
+				</div>
+				<div class="container-text">
+					<h2 class="big-title block-5-title">
+						Nos smoothies et nos milkshakes</h2>
+					<p class="global-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+				</div>
+			</div>
+
+		</div>
+ 	</div>
+
+
 
 </body>
 </html>

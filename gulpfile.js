@@ -1,10 +1,11 @@
-const gulp      = require('gulp'),
-      sass      = require('gulp-sass'),
-      babel     = require("gulp-babel"),
-      path      = require('path'),
-      uglifyJs  = require('gulp-uglify'),
-      uglifyCss = require('gulp-uglifycss'),
-      deploy    = require('gulp-gh-pages');
+const gulp         = require('gulp'),
+      sass         = require('gulp-sass'),
+      babel        = require("gulp-babel"),
+      path         = require('path'),
+      uglifyJs     = require('gulp-uglify'),
+      uglifyCss    = require('gulp-uglifycss'),
+      autoprefixer = require('gulp-autoprefixer'),
+      deploy       = require('gulp-gh-pages');
 
 
 gulp.task('html', () => {
@@ -35,13 +36,14 @@ gulp.task('es6:prod', () => {
 gulp.task('scss:dev', () => {
   return gulp.src(path.join(__dirname, "app/scss/style.scss"))
     .pipe(sass())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('dist/css'))
 });
 
 gulp.task('scss:prod', () => {
   return gulp.src(path.join(__dirname, "app/scss/style.scss"))
     .pipe(sass())
-    // minify
+    .pipe(autoprefixer())
     .pipe(uglifyCss())
     .pipe(gulp.dest('dist/css'))
 });
@@ -56,8 +58,8 @@ gulp.task('img', () => {
 
 /* ------ Tranfert fonts folder ----- */
 gulp.task('fonts', () => {
-    return gulp.src(path.join(__dirname, "app/fonts/**/*"))
-        .pipe(gulp.dest(path.join(__dirname, 'dist/fonts')))
+  return gulp.src(path.join(__dirname, "app/fonts/**/*"))
+    .pipe(gulp.dest(path.join(__dirname, 'dist/fonts')))
 });
 /* ------ Watch news in html, scss, js files. ----- */
 gulp.task('watch', ['build:dev'], () => {

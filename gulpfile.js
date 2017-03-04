@@ -60,7 +60,7 @@ gulp.task('fonts', () => {
         .pipe(gulp.dest(path.join(__dirname, 'dist/fonts')))
 });
 /* ------ Watch news in html, scss, js files. ----- */
-gulp.task('watch', () => {
+gulp.task('watch', ['build:dev'], () => {
   gulp.watch(['./app/index.html'], ['html']);
   gulp.watch(['./app/scss/**/*.scss'], ['scss:dev']);
   gulp.watch(['./app/js/**/*.js'], ['es6:dev']);

@@ -1,1 +1,1 @@
-"use strict";$("a").click(function(){return $("html, body").animate({scrollTop:$($(this).attr("href")).offset().top},2e3),!1});
+"use strict";!function(){function o(t,c,e){if(!(e<=0)){var l=c-t.scrollTop,n=l/e*3;setTimeout(function(){t.scrollTop=t.scrollTop+n,t.scrollTop!==c&&o(t,c,e-3)},3)}}var t=250,c=document.getElementById("scroll-to-block-2");c.addEventListener("click",function(e){e.preventDefault(),o(document.body,c.offsetTop,t)})}();

@@ -1,0 +1,1 @@
+"use strict";!function(){window.addEventListener("resize",function(e){var n=document.getElementById("main-image-small"),t=document.getElementById("main-image-large"),i=document.body.clientWidth;i>768?(n.style.display="none",t.style.display="block"):(t.style.display="none",n.style.display="block")})}();

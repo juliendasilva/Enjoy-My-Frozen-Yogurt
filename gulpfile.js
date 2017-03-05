@@ -5,6 +5,7 @@ const gulp         = require('gulp'),
       uglifyJs     = require('gulp-uglify'),
       uglifyCss    = require('gulp-uglifycss'),
       autoprefixer = require('gulp-autoprefixer'),
+      imagemin     = require('gulp-imagemin'),
       deploy       = require('gulp-gh-pages');
 
 
@@ -50,9 +51,14 @@ gulp.task('scss:prod', () => {
 
 /* ------ Convert tranfert app/images to dist/images ----- */
 // And compress it later.
-gulp.task('img', () => {
-  console.log('images changed ..');
+gulp.task('img:dev', () => {
   return gulp.src(path.join(__dirname, "app/images/*"))
+    .pipe(gulp.dest(path.join(__dirname, 'dist/images')))
+});
+
+gulp.task('img:prod', () => {
+  return gulp.src(path.join(__dirname, "app/images/*"))
+    .pipe(imagemin())
     .pipe(gulp.dest(path.join(__dirname, 'dist/images')))
 });
 
@@ -70,13 +76,13 @@ gulp.task('watch', ['build:dev'], () => {
 });
 
 /* ------ Build application. ----- */
-gulp.task('build:dev', ['html', 'es6:dev', 'scss:dev', 'img', 'fonts'], () => {
+gulp.task('build:dev', ['html', 'es6:dev', 'scss:dev', 'img:dev', 'fonts'], () => {
   // Make a build
   // Transpilation es6 to es5
   // Then ... adding some minification.
 });
 
-gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img', 'fonts'], () => {
+gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img:prod', 'fonts'], () => {
   // Make a build
   // Transpilation es6 to es5
   // Then ... adding some minification.

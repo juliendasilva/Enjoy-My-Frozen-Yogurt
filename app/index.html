@@ -4,7 +4,11 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script async src="./js/app.js"></script>
+	<!--Swiper Css & Js-->
+	<link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css">
+	<script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+	<!-- End Swiper Css & Js-->
+  	<script async src="./js/app.js"></script>
 </head>
 <body>
 	<header class="main-header">
@@ -14,26 +18,26 @@
 		<img class="main-image" src="images/glace1.png" alt="glace_miam" draggable="false">
 	</header>
 
-	<div class="blocks-wrapper">
+	<section class="blocks-wrapper">
 		<!--Block 1 -->
-		<div class="wrapper-block-1">
+		<article class="wrapper-block-1">
 			<h2 class="big-title">Une bonne dose de plaisir gourmand</h2>
 			<p class="global-text">Le frozen yogurt enJöy, c'est une glace au yaourt onctueuse, agrémentée de fruits frais de saison, de coulis, de biscuits croquants ou de bonbons, selon vos envies.</p>
-		</div>
+		</article>
 		<!-- Button Call To Action -->
 		<a href="#target-block-2" class="start-scroll-btn" id="scroll-to-block-2"></a>
 		<!--Block 2 -->
 		<div id="target-block-2"></div>
-		<div class="wrapper-block-2">
+		<article class="wrapper-block-2">
 			<div class="container-glace-img"></div>
 			<div class="container-text">
 				<h2 class="big-title">Des ingrédients sains et naturels</h2>
 				<p class="global-text block-2-text" >Nos frozen yogurt sont élaborés à partir d'ingrédients naturels et de qualité : du lait demi-écrémé, du yaourt nature et un peu de sucre. Le yaourt glacé est brassé dans une machine spécifique afin de lui apporter la texture légère et onctueuse.</p>
 				<button class="discover-button">Découvrez tous nos toppings</button>
 			</div>
-		</div>
+		</article>
 		<!--Block 3 -->
-		<div class="wrapper-block-3">
+		<article class="wrapper-block-3">
 			<div class="singleBlock block-left">
 				<img src="./images/annanas.png" alt="">
 			</div>
@@ -48,9 +52,9 @@
 				</div>
 
 			</div>
-		</div>
+		</article>
 		<!--Block 4 -->
-		<div class="wrapper-block-4">
+		<article class="wrapper-block-4">
 			<div class="block-4-img">
 				<img src="./images/gauffre.png" alt="">
 			</div>
@@ -59,9 +63,9 @@
 				<p class="global-text">Nos frozen yogurt sont élaborés à partir d'ingrédients naturels et de qualité : du lait demi-écrémé, du yaourt nature et un peu de sucre.</p>
 			</div>
 			<button class="discover-toppings-button"> Découvrez tous nos toppings </button>
-		</div>
+		</article>
 		<!--Block 5-->
-		<div class="wrapper-block-5">
+		<article class="wrapper-block-5">
 			<div class="block-5-container">
 				<div class="block-5-img">
 					<img src="./images/milk.png" alt="">
@@ -72,9 +76,9 @@
 					<p class="global-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
 				</div>
 			</div>
-		</div>
+		</article>
 		<!--Block 6-->
-		<div class="wrapper-block-6">
+		<article class="wrapper-block-6">
 			<div class="block-6-img">
 				<img src="./images/pomme.png" alt="">
 			</div>
@@ -85,12 +89,93 @@
 				<p class="global-text">EnJöy a été créé en 2012 par Guilhem MAZZIA et Rachid RASSOUL, deux amis possédant une grande expérience de la franchise.</p>
 				<p class="global-text">Lors d’un séjour à l'étranger, ils découvrent le frozen yogurt et l’intérêt que suscite ce produit si proche et, pourtant, si différent de la crème glacée classique. En entrepreneurs avertis, ils sentent que le frozen yogurt est LE produit à la fois tendance et pérenne qui va moderniser le marché de la glace en France.</p>
 			</div>
-		</div>
- 	</div>
-	<!--End of blocks-wrapper-->
-	<div class="address">
+		</article>
+ 	</section>
 
-	</div>
+	<section class="informations">
+		<article class="address">
+			<button id="contact_left" class="slider-btn slider_left_img"></button>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="container-adress">
+								<h2 class="medium-title address-title">Paris <br> Jardin du Luxembourg</h2>
+								<p class="global-small-text">
+									69 Bd Saint-Michel<br>
+									75005 Paris<br>
+									Métro : Cluny-La Sorbonne<br>
+									Lundi-dim : 11h30 - 18h30
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-adress">
+								<h2 class="medium-title address-title">Thiais <br> Centre commercial Belle Epine</h2>
+								<p class="global-small-text">
+									Lundi : 11h30 - 19h00 <br>
+									Mardi au vendredi : 11h30 - 19h30 <br>
+									Samedi : 11h30 - 20h00
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-adress">
+								<h2 class="medium-title address-title">Ajaccio</h2>
+								<p class="global-small-text">
+									Ouverture prochaine
+								</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="container-adress">
+								<h2 class="medium-title address-title">Marseille</h2>
+								<p class="global-small-text">
+									Ouverture prochaine
+								</p>
+							</div>
+						</div>
+						<!-- Require by swiper, do not remove. -->
+						<div class="swiper-scrollbar"></div>
+					</div>
+				</div>
+			<button id="contact_right" class="slider-btn slider_right_img"></button>
+		</article>
+		<article id="maps">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d656.4831145760571!2d2.328281!3d48.840427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUwJzQ3LjUiTiAywrAyMCcyNi43IkU!5e0!3m2!1sfr!2sus!4v1488679004597" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</article>
+		<article class="contact">
+			<h2 class="big-title contact-title">
+				Donnez nous votre avis !
+			</h2>
+			<form action="" class="contact-form">
+				<div class="container-contact-form">
+					<input class="contact-field global-text" type="text" placeholder="Non*">
+					<input class="contact-field global-text" type="email" placeholder="E-mail*">
+					<input class="contact-field global-text" type="text" placeholder="Message*">
+				</div>
+				<div class="contact-submit-container">
+					<input class="contact-submit-btn" type="submit" value="Envoyer">
+				</div>
+
+			</form>
+		</article>
+
+		<!-- Slider main container -->
+
+
+
+		<footer class="footer">
+			<nav class="footer-nav">
+				<ul>
+					<li><a href="">Franchise</a></li>
+					<li><a href="">Presse</a></li>
+					<li><a href="">Emploi</a></li>
+				</ul>
+			</nav>
+			<p class="footer-text">SAS FRYO au capital de 20.000 € - RCS de Paris 803037654 - Siège social : 46 rue Raymond Losserand - 75014 Paris - France.</p>
+		</footer>
+
+	</section>
 
 
 </body>

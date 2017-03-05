@@ -145,13 +145,13 @@
     }
   }
   & .block-5-container {
-    /*background-color: rgba(0, 12, 255, 0.1);*/
-    background-image: url('../images/bg-content-5.svg');
-    position: absolute;
-    bottom:0;
-    /*border:1px solid red;*/
-    height:85%;
-    width:100%;
+    background-image: url(../images/bg-content-5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    margin-top: 150px;
+    width: 100%;
     & .container-text {
       margin:0 auto 30px auto;
       /*border:1px solid;*/

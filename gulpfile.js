@@ -6,8 +6,17 @@ const gulp         = require('gulp'),
       uglifyCss    = require('gulp-uglifycss'),
       autoprefixer = require('gulp-autoprefixer'),
       imagemin     = require('gulp-imagemin'),
+      concat       = require('gulp-concat'),
+      concatCss    = require('gulp-concat-css'),
       deploy       = require('gulp-gh-pages');
 
+const vendorJS = [
+  path.join(__dirname, 'node_modules/swiper/dist/js/swiper.min.js')
+];
+
+const vendorCSS = [
+  path.join(__dirname, 'node_modules/swiper/dist/css/swiper.min.css')
+];
 
 gulp.task('html', () => {
   return gulp.src(path.join(__dirname, "app/index.html"))
@@ -15,16 +24,16 @@ gulp.task('html', () => {
 });
 
 /* ------ Transpilation es6 to es5. ----- */
-gulp.task('es6:dev', () => {
-  return gulp.src(path.join(__dirname, 'app/js/app.js'))
+gulp.task('es6:dev', ['vendorJS'], () => {
+  return gulp.src(path.join(__dirname, 'app/js/**/*.js'))
     .pipe(babel({
       presets: ['es2015']
     }))
     .pipe(gulp.dest(path.join(__dirname, "dist/js/")))
 });
 
-gulp.task('es6:prod', () => {
-  return gulp.src(path.join(__dirname, 'app/js/app.js'))
+gulp.task('es6:prod', ['vendorJS'], () => {
+  return gulp.src(path.join(__dirname, 'app/js/**/*.js'))
     .pipe(babel({
       presets: ['es2015']
     }))
@@ -33,15 +42,34 @@ gulp.task('es6:prod', () => {
     .pipe(gulp.dest(path.join(__dirname, "dist/js/")))
 });
 
+gulp.task('vendorJS', () => {
+  return gulp.src(vendorJS)
+    .pipe(concat('vendor.js'))
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    .pipe(uglifyJs())
+    .pipe(gulp.dest(path.join(__dirname, "dist/js/")))
+});
+
+gulp.task('vendorCSS', () => {
+  return gulp.src(vendorCSS)
+    .pipe(sass())
+    .pipe(concatCss("vendor.css"))
+    .pipe(autoprefixer())
+    .pipe(uglifyCss())
+    .pipe(gulp.dest(path.join(__dirname, "dist/css/")))
+});
+
 /* ------ Convert scss to regular css. ----- */
-gulp.task('scss:dev', () => {
+gulp.task('scss:dev', ['vendorCSS'], () => {
   return gulp.src(path.join(__dirname, "app/scss/style.scss"))
     .pipe(sass())
     .pipe(autoprefixer())
     .pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('scss:prod', () => {
+gulp.task('scss:prod', ['vendorCSS'], () => {
   return gulp.src(path.join(__dirname, "app/scss/style.scss"))
     .pipe(sass())
     .pipe(autoprefixer())
@@ -72,7 +100,7 @@ gulp.task('watch', ['build:dev'], () => {
   gulp.watch(['./app/index.html'], ['html']);
   gulp.watch(['./app/scss/**/*.scss'], ['scss:dev']);
   gulp.watch(['./app/js/**/*.js'], ['es6:dev']);
-  gulp.watch(['./app/images/*'], ['img']);
+  gulp.watch(['./app/images/*'], ['img:dev']);
 });
 
 /* ------ Build application. ----- */

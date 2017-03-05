@@ -1,11 +1,14 @@
 @import 'vendors/reset';
 @import 'vendors/fontface';
+
+@import 'mixin';
+
 /* Include some font-faces */
-@include fontFace('gunny_written','../fonts/gunny_written/gunny_written');
+@include fontFace('gunny_written', '../fonts/gunny_written/gunny_written');
 @include fontFace('OpenSans-Regular', '../fonts/Open_Sans/OpenSans-Regular');
 
 // Some global variables.
-$red : #CC2355;
+$red: #CC2355;
 $debugBorder: 1px solid black;
 $title-font: gunny_written;
 $default-font: OpenSans-Regular;

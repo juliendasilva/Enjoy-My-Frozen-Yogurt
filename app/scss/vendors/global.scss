@@ -11,6 +11,10 @@
   background-position: center;
   left: 50%;
   transform: translate(-50%,-100%);
+
+  @include desktop{
+
+  };
 }
 
 #target-block-2 {

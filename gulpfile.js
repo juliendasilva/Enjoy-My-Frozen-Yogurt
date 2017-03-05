@@ -88,6 +88,8 @@ gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img:prod', 'fonts'], 
   // Then ... adding some minification.
 });
 
+gulp.task('default', ['watch']);
+
 gulp.task('deploy', ['build:prod'], () => {
   return gulp.src(path.join(__dirname, "/dist/**/*"))
     .pipe(deploy())

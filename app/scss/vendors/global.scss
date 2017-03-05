@@ -2,7 +2,7 @@
   height: 44px;
   width: 100px;
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   background-color: $red;
   border: none;
   border-radius: 25px;
@@ -41,4 +41,8 @@
   margin-top: 7px;
   font-size:14px;
   line-height: 21px;
+}
+.swiper-container {
+  width: 100%;
+  height: auto;
 }

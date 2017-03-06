@@ -387,7 +387,10 @@ body {
 
 .wrapper-block-5-5 {
   padding-top: 80px;
-
+  display: none;
+  @include tablet {
+    display: block;
+  }
   & .block-slider-flex {
     position: relative;
     padding-bottom: 5px;
@@ -427,36 +430,80 @@ body {
   }
   .block-flex {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     height: 220px;
     flex-direction: row;
     align-items: center;
     display: flex;
+    padding-top: 25px;
+    & .singleBlock:hover {
+
+    }
     & .singleBlock {
       top: 50%;
       width: 100%;
       text-align: center;
       height: 75%;
-
       & .cube {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 0 auto;
         width: 170px;
-        height: 140px;
+        height: 190px;
+        & .cube-img {
+          cursor: pointer;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 90%;
+          height: 100%;
+        }
+        & .cube-img:hover {
+          width: 100%;
+          transition: 0.15s;
+        }
+        & .img-1 {
+          background-image: url("../images/framboise.png");
+        }
+        & .img-2 {
+          background-image: url("../images/fraise.png");
+        }
+        & .img-3 {
+          background-image: url("../images/banane.png");
+        }
+        & .img-4 {
+          background-image: url("../images/coco.png");
+        }
+        & .titre-container {
+          cursor: pointer;
+          position: relative;
+          height: 30px;
+          width: 100%;
+          color: black;
+          &.titre-container-bleu {
+            background-color: $blue;
+          }
+          &.titre-container-rouge {
+            background-color: $red;
+          }
+        }
         & h3 {
-          //position: absolute;
-          //margin:0 auto;
-          margin-top: 145px;
+          width: 100%;
           color: #ffffff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
       }
       & .cube-bleu {
-        //padding-bottom: 20px;
         border: solid 1px $blue;
-        border-bottom: solid 30px $blue;
       }
       & .cube-rouge {
         border: solid 1px $red;
-        border-bottom: solid 30px $red;
       }
     }
   }

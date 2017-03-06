@@ -1,9 +1,16 @@
 $phone-large-width: 430px;
+$phone-small-max-width: 375px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
 @mixin large-phone {
   @media (min-width: #{$phone-large-width}) {
+    @content;
+  }
+}
+
+@mixin small-phone {
+  @media (max-width: #{$phone-small-max-width}) {
     @content;
   }
 }

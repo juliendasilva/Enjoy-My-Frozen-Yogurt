@@ -37,16 +37,26 @@ body {
     }
   }
 }
-
+////////////
 .wrapper-block-2 {
   margin-top: 220px;
+  padding-bottom: 30px;
   width: 100%;
   height: 90vh;
-  background: url('../images/bg-content-2.svg');
+  background-image: url('../images/bg-content-2.svg');
   background-size: cover;
 
   @include tablet {
-    background: url('../images/bg-content-2-desktop.svg');
+    position: relative;
+    background-image: url('../images/bg-content-2-desktop.svg');
+    background-size: 120%;
+    padding: 0;
+    display: flex;
+    /*border:1px solid;*/
+    flex-direction: row;
+    align-items: center;
+    min-height: 620px;
+
   }
 
   & .container-glace-img {
@@ -57,8 +67,11 @@ body {
     margin: -70px auto 20px auto;
 
     @include tablet {
-      width: 40vh;
-      margin-left: 60vh;
+      width: 50%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
   & .big-title {
@@ -68,10 +81,37 @@ body {
     width: 88%;
     margin: 0 auto;
     color: #ffffff;
+    @include tablet {
+      padding: 40px;
+    }
+    & .block-text {
+      margin-bottom:50px;
+    }
+    & .not-mobile {
+      display: none;
+    }
+    @include tablet {
+      width:50%;
+      margin: 0 20px;
+      & .not-mobile {
+        display: block;
+      }
+    }
+  }
+  & .container-img-2 {
+    display: none;
 
     @include tablet {
-      width: 40%;
-      margin-left: 20px;
+      display: block;
+      height: 200px;
+      width: 200px;
+      background-image: url(../images/fraise-big.png);
+      position: absolute;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      bottom: 20%;
+
     }
   }
   & .discover-button {
@@ -89,7 +129,7 @@ body {
     }
   }
 }
-
+////////
 .wrapper-block-3 {
   width: 100%;
   height: 220px;
@@ -133,6 +173,10 @@ body {
     color: $red;
     text-align: center;
     font-size: 45px;
+    display: none;
+    @include tablet {
+        display: block;
+      }
   }
   .block-flex {
     width: 100%;
@@ -302,7 +346,6 @@ body {
       }
     }
   }
-
 }
 
 .wrapper-block-5 {

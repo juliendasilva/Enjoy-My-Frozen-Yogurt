@@ -87,7 +87,7 @@ body {
     }
     & .block-text {
       margin-bottom:30px;
-    
+
       @include desktop{
         margin-bottom:50px;
       }
@@ -225,7 +225,7 @@ body {
           text-align: left;
           font-family: $default-font;
           line-height: 19px;
-          font-size: 12px;
+          font-size: 14px;
         }
       }
     }

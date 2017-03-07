@@ -8,7 +8,7 @@ body {
 
 .wrapper-block-1 {
   width: 88%;
-  margin: -83px auto 30px;
+  margin: -79px auto 30px;
   text-align: center;
   & .big-title {
     color: #CC2355;
@@ -25,13 +25,13 @@ body {
     }
   }
   & .global-text {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     @include large-phone {
       width: 86%;
     }
     @include tablet {
-      margin-top: 4vh;
+      margin-top: 40px;
       font-size: 16px;
       width: 75%;
     }
@@ -521,7 +521,8 @@ body {
 }
 
 .wrapper-block-6 {
-  min-height: 105vh;
+  // min-height: 105vh;
+  margin-bottom: 60px;
   flex-direction: column;
   @include tablet {
     display: flex;

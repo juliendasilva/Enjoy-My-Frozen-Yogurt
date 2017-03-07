@@ -53,7 +53,6 @@ body {
     background-size: 120%;
     padding: 0;
     display: flex;
-    /*border:1px solid;*/
     flex-direction: row;
     align-items: center;
     min-height: 620px;
@@ -87,7 +86,6 @@ body {
     }
     & .block-text {
       margin-bottom:30px;
-
       @include desktop{
         margin-bottom:50px;
       }
@@ -125,7 +123,7 @@ body {
     font-family: $default-font;
     height: 44px;
     width: 82%;
-    max-width:250px;
+    max-width: 250px;
     font-size: 14px;
     color: white;
     background-color: $red;
@@ -183,8 +181,8 @@ body {
   text-align: center;
   @include tablet {
     display: block;
-    height:auto;
-    padding:30px 0 65px 0;
+    height: auto;
+    padding: 30px 0 65px 0;
   }
   .big-title {
     color: $red;
@@ -535,22 +533,22 @@ body {
     display: flex;
     height: 431px;
     min-height: 300px;
-    margin:100px 0;
+    margin: 100px 0;
     flex-direction: row-reverse;
     align-items: center;
   }
   & .block-6-img {
     height: 200px;
-    width:100%;
+    width: 100%;
     margin: 60px 0 30px 0;
     background-image: url('../images/pomme.png');
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
     @include tablet {
-      height:76%;
+      height: 76%;
       width: 50%;
-      margin:0;
+      margin: 0;
     }
     & img {
       width: 100%;
@@ -572,7 +570,7 @@ body {
     align-items: center;
     width: 85%;
     @include tablet {
-      width:40%;
+      width: 40%;
     }
     & :last-child {
       margin-top: 21px;

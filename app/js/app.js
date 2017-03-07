@@ -48,21 +48,20 @@
 
   // Topping list selected.
   const topping_lis = document.querySelectorAll('.select-topping');
-  const cursor = document.querySelector('.cursor');
+  const cursor      = document.querySelector('.cursor');
   for (let li of topping_lis) {
     li.addEventListener('click', (e) => {
       let el = e.target;
-        // Select the second class, on this second class we retrieve the last index
-        // which is an number.
-        let current_position = cursor.classList[1][cursor.classList[1].length-1];
-        let wanted_position =  el.classList[1][el.classList[1].length-1];
-        if (wanted_position !== current_position) {
-            cursor.classList.remove('position-' + current_position);
-            cursor.classList.add('position-' + wanted_position);
-        }
+      // Select the second class, on this second class we retrieve the last index
+      // which is an number.
+      let current_position = cursor.classList[1][cursor.classList[1].length - 1];
+      let wanted_position  = el.classList[1][el.classList[1].length - 1];
+      if (wanted_position !== current_position) {
+        cursor.classList.remove('position-' + current_position);
+        cursor.classList.add('position-' + wanted_position);
+      }
     })
   }
-
 
   /*   ---------  Functions to Handle button submit contact. ---------   */
 
@@ -73,13 +72,13 @@
     field.addEventListener('click', goStandby);
   }
   // Handle click button Send.
-  let handleSubmitClick =  function (e) {
-    e.preventDefault();
-    const btn = e.target,
-        name = document.querySelector('.field-name'),
-        email = document.querySelector('.field-email'),
-        message = document.querySelector('.field-message'),
-        fields = [name, email, message];
+  let handleSubmitClick = function(e) {
+    // e.preventDefault();
+    const btn     = e.target,
+          name    = document.querySelector('.field-name'),
+          email   = document.querySelector('.field-email'),
+          message = document.querySelector('.field-message'),
+          fields   = [name, email, message];
         // if succeed before, return.
         if (e.target.classList[1] !== 'submit-standby') {
           goStandby();
@@ -105,19 +104,19 @@
         return;
   };
 
-  function isValidEmail (emailStr) {
+  function isValidEmail(emailStr) {
     const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return reg.test(emailStr);
   }
 
-  function fireError (element, causeIndex) {
+  function fireError(element, causeIndex) {
     const errors = ["Veuillez remplir tous les champs", "Merci d'entrer une adresse e-mail valide"];
     element.classList.remove('submit-standby');
     element.classList.add('submit-error');
     element.value = errors[causeIndex];
   }
 
-  function fireSuccess (element, fieldsArr) {
+  function fireSuccess(element, fieldsArr) {
     element.classList.remove('submit-standby');
     element.classList.add('submit-success');
     element.value = "Votre message à bien été envoyé, merci !";
@@ -129,15 +128,24 @@
     }
   }
 
-  function goStandby () {
+  function goStandby() {
     let element = document.querySelector('.contact-submit-btn');
-    element.classList.remove(element.classList[1])
+    element.classList.remove(element.classList[1]);
     element.classList.add('submit-standby');
     element.value = "Envoyer";
   }
 
   document.querySelector('.contact-submit-btn').addEventListener('click', handleSubmitClick);
+
   // We prevent default when submit, because there is no back-end
   // in this project to handle data shared.
   document.querySelector('#contact-form').addEventListener('submit', (e)=>{e.preventDefault()});
+
+// modal
+  const modal_button = document.getElementsByClassName('modal-button-toppings');
+
+  modal_button.addEventListener('click', () => {
+    console.log('btn left clicked');
+  });
+
 })();

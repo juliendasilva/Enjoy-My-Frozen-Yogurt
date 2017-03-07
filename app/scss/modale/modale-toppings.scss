@@ -1,0 +1,73 @@
+.blocks-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  @include tablet {
+    display: none;
+  }
+  & .block-modals-content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    background: #ffffff;
+    & .blocks-modal-header {
+      width: 100%;
+      height: 15%;
+      background-color: $red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & .blocks-modal-header-title {
+        color: #ffffff;
+        font-family: $title-font;
+        font-size: 25px;
+      }
+    }
+    & .block-modals-flex {
+      width: 100%;
+      height: 85%;
+      background: #ffffff;
+      & .block-modals-flex-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        height: calc(100% / 3);
+        & .block-modals-flex-column {
+          width: 100%;
+          border: 1px solid rgba(223, 223, 223, .5);
+          & .block-modals-flex-column-img {
+            cursor: pointer;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 80%;
+          }
+          & .modal-img-1 {
+            background-image: url("../../images/fraise.png");
+          }
+          & .modal-img-2 {
+            background-image: url("../../images/framboise.png");
+          }
+          & .modal-img-3 {
+            background-image: url("../../images/banane.png");
+          }
+          & .modal-img-4 {
+            background-image: url("../../images/coco.png");
+          }
+          & .block-modals-flex-column-title {
+            text-align: center;
+            bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

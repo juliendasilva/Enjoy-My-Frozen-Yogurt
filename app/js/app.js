@@ -46,4 +46,13 @@
     scrollbar: '.swiper-scrollbar',
   });
 
+
+  //modal
+  const modal_button = document.getElementsByClassName('modal-button-toppings');
+
+  modal_button.addEventListener('click', () => {
+    console.log('btn left clicked');
+  });
+
+
 })();

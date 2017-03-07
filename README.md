@@ -4,6 +4,9 @@ Mobile first Hetic project
 # Enjoy my frozen yogurt
 An existing website, re-create from scratch to build it mobile first oriented.
 
+#Link
+https://julien-dasilva.fr/enjoy/
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -34,7 +37,9 @@ npm run prod
 
 Congratulations, you can now open /dist/index.html file to see the enjoy website redesign
 
-## Running gulp watcher
+## Gulp
+
+### Running gulp watcher
 
 ```
 npm start

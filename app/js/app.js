@@ -47,11 +47,13 @@
   });
 
   // Topping list selected.
-    let topping_lis = document.querySelectorAll('.select-topping');
-    let cursor = document.querySelector('.cursor');
+    const topping_lis = document.querySelectorAll('.select-topping');
+    const cursor = document.querySelector('.cursor');
     for (let li of topping_lis) {
         li.addEventListener('mouseover', (e) => {
             let el = e.target;
+            // Select the second class, on this second class we retrieve the last index
+            // which is an number.
             let current_position = cursor.classList[1][cursor.classList[1].length-1];
             let wanted_position =  el.classList[1][el.classList[1].length-1];
 

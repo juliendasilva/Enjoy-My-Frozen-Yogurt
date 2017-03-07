@@ -46,4 +46,21 @@
     scrollbar: '.swiper-scrollbar',
   });
 
+  // Topping list selected.
+    let topping_lis = document.querySelectorAll('.select-topping');
+    let cursor = document.querySelector('.cursor');
+    for (let li of topping_lis) {
+        li.addEventListener('mouseover', (e) => {
+            let el = e.target;
+            let current_position = cursor.classList[1][cursor.classList[1].length-1];
+            let wanted_position =  el.classList[1][el.classList[1].length-1];
+
+            if (wanted_position !== current_position) {
+                cursor.classList.remove('position-' + current_position);
+                cursor.classList.add('position-' + wanted_position);
+            }
+        })
+    }
+
+
 })();

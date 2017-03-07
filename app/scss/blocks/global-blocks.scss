@@ -399,23 +399,38 @@ body {
     flex-direction: row;
     display: flex;
     text-align: center;
-    & hr {
+    & .separator {
       border: 0;
       position: absolute;
       margin-top: 21px;
       width: 100%;
       background-color: #DDDDDD;
       height: 2px;
+      & .position-1 {
+        height:100%;
+        width:33%;
+        background-color: $red;
+        transition: 1.5s;
+      }
+      & .position-2 {
+        height:100%;
+        width:33%;
+        margin-left:33%;
+        background-color: $red;
+        transition: 1.5s;
+      }
+      & .position-3 {
+        height:100%;
+        width:34%;
+        margin-left:66%;
+        background-color: $red;
+        transition: 1.5s;
+      }
     }
-    & h3 {
+    & .select-topping {
       cursor: pointer;
       width: 100%;
-    }
-    & h3:hover {
-      padding-bottom: 5px;
-      color: $red;
-      z-index: 2;
-      border-bottom: 2px solid $red;
+      list-style: none;
     }
   }
 

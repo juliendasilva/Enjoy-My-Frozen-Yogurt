@@ -1,8 +1,12 @@
+body {
+  position: relative;
+}
+
 .start-scroll-btn {
   height: 44px;
   width: 100px;
   position: absolute;
-  bottom: -20px;
+  top: 98vh;
   background-color: $red;
   border: none;
   border-radius: 25px;
@@ -37,8 +41,11 @@
 .global-text {
   font-family: $default-font;
   margin-top: 7px;
-  font-size:16px;
+  font-size:14px;
   line-height: 22px;
+  @include tablet {
+    font-size:16px;
+  }
 }
 .global-small-text {
   font-family: $default-font;

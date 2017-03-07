@@ -68,6 +68,10 @@
   </div>
 </section>
 
+<!-- Button Call To Action -->
+<a href="#target-block-2" class="start-scroll-btn" id="scroll-to-block-2"></a>
+<!--Block 3 -->
+
 <section class="blocks-wrapper">
   <!--Block 1 -->
   <article class="wrapper-block-1">
@@ -75,8 +79,6 @@
     <p class="global-text">Le frozen yogurt enJöy, c'est une glace au yaourt onctueuse, agrémentée de fruits frais de
       saison, de coulis, de biscuits croquants ou de bonbons, selon vos envies.</p>
   </article>
-  <!-- Button Call To Action -->
-  <a href="#target-block-2" class="start-scroll-btn" id="scroll-to-block-2"></a>
   <!--Block 2 -->
   <div id="target-block-2"></div>
   <article class="wrapper-block-2">
@@ -103,9 +105,8 @@
       <button class="discover-button modal-button-toppings">Découvrez tous nos toppings</button>
     </div>
     <div class="container-img-2 not-mobile"></div>
-
   </article>
-  <!--Block 3 -->
+
   <article class="wrapper-block-3">
     <div class="singleBlock block-left">
       <img src="./images/annanas.png" alt="">
@@ -115,7 +116,7 @@
         <h2 class="big-title block-3-title">
           Des fruits frais de saison
         </h2>
-        <p class="block-3-text global-text">
+        <p class="block-3-text">
           Chez enJöy, nous attachons une grande importance à ne proposer que des fruits frais de saison.
         </p>
       </div>
@@ -220,11 +221,16 @@
   <article class="wrapper-block-5-5">
     <h2 class="big-title">Nos toppings délicieux</h2>
 
-    <div class="block-slider-flex">
-      <h3>Les fruits</h3>
-      <h3>Les croquants</h3>
-      <h3>Les coulis</h3>
-      <hr>
+    <div class="block-slider">
+      <ul class="block-slider-flex">
+        <li class="select-topping topping-1">Les fruits<li>
+        <li class="select-topping topping-2">Les croquants</li>
+        <li class="select-topping tppping-3">Les coulis</li>
+        <div class="separator">
+          <!--do not change classes on the div bellow-->
+          <div class="cursor position-1"></div>
+        </div>
+      </ul>
     </div>
 
     <div class="block-flex">
@@ -384,21 +390,20 @@
     <h2 class="big-title contact-title">
       Donnez nous votre avis !
     </h2>
-    <form action="" class="contact-form">
+    <form action="#" class="contact-form">
       <div class="container-contact-form">
-        <input class="contact-field global-text" type="text" placeholder="Non*">
-        <input class="contact-field global-text" type="email" placeholder="E-mail*">
-        <input class="contact-field global-text" type="text" placeholder="Message*">
+        <input class="contact-field field-name global-text" type="text" placeholder="Nom*" required>
+        <input class="contact-field field-email global-text" type="email" placeholder="Adresse e-mail*" required>
+        <input class="contact-field field-message global-text" type="text" placeholder="Message*" required>
       </div>
       <div class="contact-submit-container">
-        <input class="contact-submit-btn" type="submit" value="Envoyer">
+        <input class="contact-submit-btn submit-standby" type="submit" value="Envoyer">
       </div>
 
     </form>
   </article>
 
   <!-- Slider main container -->
-
 
   <footer class="footer">
     <nav class="footer-nav">

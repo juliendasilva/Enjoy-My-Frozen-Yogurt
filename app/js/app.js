@@ -115,7 +115,7 @@
   function fireSuccess(element, fieldsArr) {
     element.classList.remove('submit-standby');
     element.classList.add('submit-success');
-    element.value = "Merci pour votre message !";
+    element.value = "Votre message à bien été envoyé, merci !";
     // Clear inputs
     if (fieldsArr) {
       for (const field of fieldsArr) {
@@ -132,6 +132,10 @@
   }
 
   document.querySelector('.contact-submit-btn').addEventListener('click', handleSubmitClick);
+
+  // We prevent default when submit, because there is no back-end
+  // in this project to handle data shared.
+  document.querySelector('#contact-form').addEventListener('submit', (e)=>{e.preventDefault()});
 
 //modal
   const modal_button = document.getElementsByClassName('modal-button-toppings');

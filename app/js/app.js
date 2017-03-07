@@ -145,10 +145,13 @@
 
 //modal
 
-  document.querySelector('.modal-button-toppings').addEventListener('click', () => {
-    console.log('btn left clicked');
-    document.querySelector('.blocks-modal').style.display = "flex";
-  });
+  let btn_modal = document.querySelectorAll('.modal-button-toppings');
+  for (let btn of btn_modal) {
+    btn.addEventListener('click', () => {
+      console.log('btn left clicked');
+      document.querySelector('.blocks-modal').style.display = "flex";
+    });
+  }
 
   document.querySelector('.modal-close').addEventListener('click', () => {
     console.log('btn left clicked');

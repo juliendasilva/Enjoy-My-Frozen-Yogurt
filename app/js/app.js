@@ -135,13 +135,21 @@
 
   // We prevent default when submit, because there is no back-end
   // in this project to handle data shared.
-  document.querySelector('#contact-form').addEventListener('submit', (e)=>{e.preventDefault()});
+  document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault()
+  });
 
 //modal
-  const modal_button = document.getElementsByClassName('modal-button-toppings');
 
-  modal_button.addEventListener('click', () => {
+  document.querySelector('.modal-button-toppings').addEventListener('click', () => {
     console.log('btn left clicked');
+    document.querySelector('.blocks-modal').style.display = "flex";
   });
+
+  document.querySelector('.modal-close').addEventListener('click', () => {
+    console.log('btn left clicked');
+    document.querySelector('.blocks-modal').style.display = "none";
+  });
+
 
 })();

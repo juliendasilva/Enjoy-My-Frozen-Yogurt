@@ -62,4 +62,22 @@
         }
     })
   }
+
+  function isValidEmail (emailStr) {
+    const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return reg.test(emailStr);
+  }
+  // Handle button submit
+  let btn = document.querySelector('.contact-submit-btn').addEventListener('click', () => {
+    const name = document.querySelector('.field-name').value,
+        email = document.querySelector('.field-email').value,
+        message = document.querySelector('.field-message').value,
+        fields = [name, email, message];
+        // Test if all fields aren't empty.
+        if (!name && !email && !message) return;
+        // Test email adress.
+        if (!isValidEmail(email)) return;
+        
+
+  })
 })();

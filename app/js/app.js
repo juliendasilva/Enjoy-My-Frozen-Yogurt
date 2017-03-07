@@ -81,7 +81,10 @@
         message = document.querySelector('.field-message'),
         fields = [name, email, message];
         // if succeed before, return.
-        if (e.target.classList.contains('submit-success')) return;
+        if (e.target.classList[1] !== 'submit-standby') {
+          goStandby();
+          return;
+        }
         // Test if all fields aren't empty.
         if (!name.value || !email.value || !message.value) {
           // if error aren't already display, we do.

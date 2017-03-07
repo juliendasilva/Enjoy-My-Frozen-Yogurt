@@ -74,7 +74,7 @@
   }
   // Handle click button Send.
   let handleSubmitClick =  function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     const btn = e.target,
         name = document.querySelector('.field-name'),
         email = document.querySelector('.field-email'),
@@ -117,7 +117,7 @@
   function fireSuccess (element, fieldsArr) {
     element.classList.remove('submit-standby');
     element.classList.add('submit-success');
-    element.value = "Merci pour votre message !";
+    element.value = "Votre message à bien été envoyé, merci !";
     // Clear inputs
     if (fieldsArr) {
       for (const field of fieldsArr) {

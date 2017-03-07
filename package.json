@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./node_modules/.bin/gulp watch",
     "dev": "./node_modules/.bin/gulp build:dev",
-    "prod": "./node_modules/.bin/gulp build:prod"
+    "prod": "./node_modules/.bin/gulp build:prod",
+    "deploy": "./node_modules/.bin/gulp deploy"
   },
   "repository": {
     "type": "git",

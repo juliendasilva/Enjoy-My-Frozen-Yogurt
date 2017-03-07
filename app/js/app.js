@@ -63,21 +63,75 @@
     })
   }
 
+
+  /*   ---------  Functions to Handle button submit contact. ---------   */
+
+  // When clicking to one of these field
+  // if necesary, we change the button state to the 'standby' one.
+  const fields = document.querySelectorAll('.contact-field');
+  for (const field of fields) {
+    field.addEventListener('click', goStandby);
+  }
+  // Handle click button Send.
+  let handleSubmitClick =  function (e) {
+    e.preventDefault();
+    const btn = e.target,
+        name = document.querySelector('.field-name'),
+        email = document.querySelector('.field-email'),
+        message = document.querySelector('.field-message'),
+        fields = [name, email, message];
+        // if succeed before, return.
+        if (e.target.classList.contains('submit-success')) return;
+        // Test if all fields aren't empty.
+        if (!name.value || !email.value || !message.value) {
+          // if error aren't already display, we do.
+          if (!btn.classList.contains('.submit-error')) {
+            fireError(btn, 0);
+            return;
+          }
+        }
+        // Fields are filled.
+        // Test email adress.
+        if (!isValidEmail(email.value)) {
+          console.log('email non valide');
+          fireError(btn, 1);
+          return;
+        }
+        // Ready to send.
+        fireSuccess(btn, fields);
+        return;
+  };
+
   function isValidEmail (emailStr) {
     const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return reg.test(emailStr);
   }
-  // Handle button submit
-  let btn = document.querySelector('.contact-submit-btn').addEventListener('click', () => {
-    const name = document.querySelector('.field-name').value,
-        email = document.querySelector('.field-email').value,
-        message = document.querySelector('.field-message').value,
-        fields = [name, email, message];
-        // Test if all fields aren't empty.
-        if (!name && !email && !message) return;
-        // Test email adress.
-        if (!isValidEmail(email)) return;
-        
 
-  })
+  function fireError (element, causeIndex) {
+    const errors = ["Veuillez remplir tous les champs", "Merci d'entrer une adresse e-mail valide"];
+    element.classList.remove('submit-standby');
+    element.classList.add('submit-error');
+    element.value = errors[causeIndex];
+  }
+
+  function fireSuccess (element, fieldsArr) {
+    element.classList.remove('submit-standby');
+    element.classList.add('submit-success');
+    element.value = "Merci pour votre message !";
+    // Clear inputs
+    if (fieldsArr) {
+      for (const field of fieldsArr) {
+        field.value = "";
+      }
+    }
+  }
+
+  function goStandby () {
+    let element = document.querySelector('.contact-submit-btn');
+    element.classList.remove(element.classList[1])
+    element.classList.add('submit-standby');
+    element.value = "Envoyer";
+  }
+
+  document.querySelector('.contact-submit-btn').addEventListener('click', handleSubmitClick);
 })();

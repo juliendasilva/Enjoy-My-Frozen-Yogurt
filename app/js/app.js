@@ -74,7 +74,7 @@
   }
   // Handle click button Send.
   let handleSubmitClick =  function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     const btn = e.target,
         name = document.querySelector('.field-name'),
         email = document.querySelector('.field-email'),
@@ -134,4 +134,7 @@
   }
 
   document.querySelector('.contact-submit-btn').addEventListener('click', handleSubmitClick);
+  // We prevent default when submit, because there is no back-end
+  // in this project to handle data shared.
+  document.querySelector('#contact-form').addEventListener('submit', (e)=>{e.preventDefault()});
 })();

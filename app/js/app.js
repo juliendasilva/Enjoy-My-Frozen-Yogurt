@@ -73,31 +73,35 @@
   }
   // Handle click button Send.
   let handleSubmitClick = function(e) {
-    e.preventDefault();
+    // e.preventDefault();
     const btn     = e.target,
           name    = document.querySelector('.field-name'),
           email   = document.querySelector('.field-email'),
           message = document.querySelector('.field-message'),
-          fields  = [name, email, message];
-    // if succeed before, return.
-    if (e.target.classList.contains('submit-success')) return;
-    // Test if all fields aren't empty.
-    if (!name.value || !email.value || !message.value) {
-      // if error aren't already display, we do.
-      if (!btn.classList.contains('.submit-error')) {
-        fireError(btn, 0);
+          fields   = [name, email, message];
+        // if succeed before, return.
+        if (e.target.classList[1] !== 'submit-standby') {
+          goStandby();
+          return;
+        }
+        // Test if all fields aren't empty.
+        if (!name.value || !email.value || !message.value) {
+          // if error aren't already display, we do.
+          if (!btn.classList.contains('.submit-error')) {
+            fireError(btn, 0);
+            return;
+          }
+        }
+        // Fields are filled.
+        // Test email adress.
+        if (!isValidEmail(email.value)) {
+          console.log('email non valide');
+          fireError(btn, 1);
+          return;
+        }
+        // Ready to send.
+        fireSuccess(btn, fields);
         return;
-      }
-    }
-    // Fields are filled.
-    // Test email adress.
-    if (!isValidEmail(email.value)) {
-      console.log('email non valide');
-      fireError(btn, 1);
-      return;
-    }
-    // Ready to send.
-    fireSuccess(btn, fields);
   };
 
   function isValidEmail(emailStr) {

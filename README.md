@@ -5,7 +5,7 @@ Mobile first Hetic project
 An existing website, re-create from scratch to build it mobile first oriented.
 
 #Link
-https://julien-dasilva.fr/enjoy/
+https://juliendasilva.github.io/w2-p2018-12/
 
 ## Getting Started
 

@@ -60,17 +60,10 @@ gulp.task("favicons", function () {
       developerName: "Alexandre Cibot and Julien Da Silva",
       developerURL: "https://julien-dasilva.fr/",
       background: "#cc2355",
-      path: "favicons/",
       url: "https://zealous-wozniak-5d9e95.netlify.com/",
       display: "standalone",
       orientation: "portrait",
-      start_url: "/",
       version: 1.0,
-      logging: false,
-      online: false,
-      html: "index.html",
-      pipeHTML: true,
-      replace: true
   }))
   .pipe(gulp.dest(path.join(__dirname, "dist/")));
 });

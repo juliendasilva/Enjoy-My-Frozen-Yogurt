@@ -8,6 +8,7 @@ const gulp         = require('gulp'),
       imagemin     = require('gulp-imagemin'),
       concat       = require('gulp-concat'),
       concatCss    = require('gulp-concat-css'),
+      favicons     = require("gulp-favicons"),
       deploy       = require('gulp-gh-pages');
 
 const vendorJS = [
@@ -50,6 +51,28 @@ gulp.task('vendorJS', () => {
     }))
     .pipe(uglifyJs())
     .pipe(gulp.dest(path.join(__dirname, "dist/js/")))
+});
+
+gulp.task("favicons", function () {
+  return gulp.src(path.join(__dirname, "app/images/glace1.png")).pipe(favicons({
+      appName: "Enjoy My Frozen Yogurt",
+      appDescription: "An existing website, re-create from scratch to build it mobile first oriented",
+      developerName: "Alexandre Cibot and Julien Da Silva",
+      developerURL: "https://julien-dasilva.fr/",
+      background: "#cc2355",
+      path: "favicons/",
+      url: "https://zealous-wozniak-5d9e95.netlify.com/",
+      display: "standalone",
+      orientation: "portrait",
+      start_url: "/",
+      version: 1.0,
+      logging: false,
+      online: false,
+      html: "index.html",
+      pipeHTML: true,
+      replace: true
+  }))
+  .pipe(gulp.dest(path.join(__dirname, "dist/")));
 });
 
 gulp.task('vendorCSS', () => {
@@ -110,7 +133,7 @@ gulp.task('build:dev', ['html', 'es6:dev', 'scss:dev', 'img:dev', 'fonts'], () =
   // Then ... adding some minification.
 });
 
-gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img:prod', 'fonts'], () => {
+gulp.task('build:prod', ['html', 'es6:prod', 'scss:prod', 'img:prod', 'fonts', 'favicons'], () => {
   // Make a build
   // Transpilation es6 to es5
   // Then ... adding some minification.

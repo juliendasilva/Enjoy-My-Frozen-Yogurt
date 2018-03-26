@@ -1,11 +1,8 @@
-# w2-p2018-12
-Mobile first Hetic project
-
 # Enjoy my frozen yogurt
 An existing website, re-create from scratch to build it mobile first oriented.
 
 #Link
-https://juliendasilva.github.io/w2-p2018-12/
+https://zealous-wozniak-5d9e95.netlify.com/
 
 ## Getting Started
 
@@ -24,7 +21,7 @@ A step by step series that tell you how to get a development env running
 We are using npm runner so you don't need to install gulp in global
 
 ```
-cd w2-p2018-12
+cd Enjoy-My-Frozen-Yogurt
 ```
 
 ```

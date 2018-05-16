@@ -2,7 +2,7 @@
 An existing website, re-create from scratch to build it mobile first oriented.
 
 #Link
-https://zealous-wozniak-5d9e95.netlify.com/
+https://enjoymyfrozenyogurt.netlify.com
 
 ## Getting Started
 

@@ -1,4 +1,7 @@
 # Enjoy my frozen yogurt
+
+[![GuardRails badge](https://badges.production.guardrails.io/juliendasilva/Enjoy-My-Frozen-Yogurt.svg)](https://www.guardrails.io)
+
 An existing website, re-create from scratch to build it mobile first oriented.
 
 # Link
